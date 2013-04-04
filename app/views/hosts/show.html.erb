@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @host.name %> </h2>
+
+<% @host_info.run_me.each do |plugin| %>
+  <% plugin.each do |key, value| %>
+  <dl>
+    <dt><%= key %></dt>
+    <dd><%= value %></dd>
+  </dl>
+<%end%>
+
+
+<%end%>
+<%= link_to 'Edit', edit_host_path(@host) %> |
+<%= link_to 'Back', hosts_path %>
